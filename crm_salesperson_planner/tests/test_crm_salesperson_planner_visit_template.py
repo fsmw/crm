@@ -228,7 +228,10 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             fields.Date.from_string(filtered_tue_dates[len(filtered_tue_dates) - 1]),
         )
 
+<<<<<<< HEAD
     @freeze_time("2024-11-01")
+=======
+>>>>>>> upstream/18.0
     def test_06_repeat_months_count_01(self):
         self.visit_template_base.write(
             {
@@ -246,7 +249,13 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
+<<<<<<< HEAD
         ).create({"date_to": "2024-12-13"})
+=======
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
+>>>>>>> upstream/18.0
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)
@@ -257,7 +266,10 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             fields.Date.from_string("2024-05-01"),
         )
 
+<<<<<<< HEAD
     @freeze_time("2024-11-01")
+=======
+>>>>>>> upstream/18.0
     def test_06_repeat_months_count_02(self):
         self.visit_template_base.write(
             {
@@ -266,6 +278,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
                 "rrule_type": "monthly",
                 "end_type": "count",
                 "count": 2,
+<<<<<<< HEAD
                 "month_by": "date",
                 "day": 1,
             }
@@ -295,6 +308,8 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
                 "rrule_type": "monthly",
                 "end_type": "count",
                 "count": 2,
+=======
+>>>>>>> upstream/18.0
                 "month_by": "day",
                 "byday": "1",
                 "weekday": "MON",
@@ -305,7 +320,13 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
+<<<<<<< HEAD
         ).create({"date_to": "2024-12-13"})
+=======
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
+>>>>>>> upstream/18.0
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)
@@ -331,7 +352,13 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
+<<<<<<< HEAD
         ).create({"date_to": "2030-01-01"})
+=======
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
+>>>>>>> upstream/18.0
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)

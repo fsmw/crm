@@ -6,7 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "PO-Revision-Date: 2025-03-12 09:06+0000\n"
+=======
+"PO-Revision-Date: 2024-04-03 15:36+0000\n"
+>>>>>>> upstream/18.0
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +18,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+<<<<<<< HEAD
 "X-Generator: Weblate 5.10.2\n"
+=======
+"X-Generator: Weblate 4.17\n"
+>>>>>>> upstream/18.0
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_needaction
@@ -80,6 +88,10 @@ msgstr "Di giorno"
 
 #. module: crm_salesperson_planner
 #: model:ir.actions.server,name:crm_salesperson_planner.ir_cron_create_visits_ir_actions_server
+<<<<<<< HEAD
+=======
+#: model:ir.cron,cron_name:crm_salesperson_planner.ir_cron_create_visits
+>>>>>>> upstream/18.0
 msgid "CRM: Create salesperson visits"
 msgstr "CRM: crea visita addetto vendite"
 
@@ -143,7 +155,10 @@ msgstr "Azienda"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+<<<<<<< HEAD
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
+=======
+>>>>>>> upstream/18.0
 msgid "Confirm"
 msgstr "Conferma"
 
@@ -248,7 +263,10 @@ msgstr "Nome visualizzato"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__state__done
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+<<<<<<< HEAD
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
+=======
+>>>>>>> upstream/18.0
 msgid "Done"
 msgstr "Eseguita"
 
@@ -256,7 +274,10 @@ msgstr "Eseguita"
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit__state__draft
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__state__draft
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+<<<<<<< HEAD
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
+=======
+>>>>>>> upstream/18.0
 msgid "Draft"
 msgstr "Bozza"
 
@@ -414,6 +435,18 @@ msgid "Last"
 msgstr "Ultimo"
 
 #. module: crm_salesperson_planner
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit____last_update
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_reason____last_update
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz____last_update
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template____last_update
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template_create____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: crm_salesperson_planner
+>>>>>>> upstream/18.0
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__write_uid
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_reason__write_uid
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__write_uid
@@ -452,6 +485,15 @@ msgid "Let the event automatically repeat at that interval"
 msgstr "Consente la ripetizione automatica dell'evento con quell'intervallo"
 
 #. module: crm_salesperson_planner
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_main_attachment_id
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Allegato principale"
+
+#. module: crm_salesperson_planner
+>>>>>>> upstream/18.0
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view
 msgid "Manually Create Visits"
 msgstr "Crea visite manualmente"
@@ -609,12 +651,15 @@ msgid "Phone"
 msgstr "Telefono"
 
 #. module: crm_salesperson_planner
+<<<<<<< HEAD
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__rating_ids
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__rating_ids
 msgid "Ratings"
 msgstr "Valutazioni"
 
 #. module: crm_salesperson_planner
+=======
+>>>>>>> upstream/18.0
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__reason_id
 msgid "Reason"
 msgstr "Motivo"
@@ -962,7 +1007,11 @@ msgstr "Conferma"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit__state__confirm
 msgid "Validated"
+<<<<<<< HEAD
 msgstr "Approvata"
+=======
+msgstr "Confermata"
+>>>>>>> upstream/18.0
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
@@ -1063,12 +1112,15 @@ msgstr "Anni"
 msgid "crm salesperson planner visit template create"
 msgstr "Crea modello visita agenda addetto vendite CRM"
 
+<<<<<<< HEAD
 #~ msgid "Last Modified on"
 #~ msgstr "Ultima modifica il"
 
 #~ msgid "Main Attachment"
 #~ msgstr "Allegato principale"
 
+=======
+>>>>>>> upstream/18.0
 #~ msgid "Active"
 #~ msgstr "Attiva"
 

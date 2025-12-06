@@ -2,7 +2,11 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 {
     "name": "Crm Salesperson Planner",
+<<<<<<< HEAD
     "version": "18.0.1.0.0",
+=======
+    "version": "18.0.1.1.0",
+>>>>>>> upstream/18.0
     "development_status": "Beta",
     "category": "Customer Relationship Management",
     "author": "Sygel Technology," "Odoo Community Association (OCA)",

@@ -2,8 +2,13 @@
 <!-- Copyright 2021 Sygel - Valentin Vinagre
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
+<<<<<<< HEAD
     <record model="ir.ui.view" id="crm_salesperson_planner_visit_list_view">
         <field name="name">CRM - Salesperson Planner Visit List</field>
+=======
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_tree_view">
+        <field name="name">CRM - Salesperson Planner Visit Tree</field>
+>>>>>>> upstream/18.0
         <field name="model">crm.salesperson.planner.visit</field>
         <field name="arch" type="xml">
             <list
@@ -30,18 +35,31 @@
                     name="action_confirm"
                     type="object"
                     icon="fa-calendar text-success"
+<<<<<<< HEAD
                     title="Confirm"
                     invisible="state != 'draft'"
+=======
+                    invisible="state != 'draft'"
+                    title="Confirm"
+>>>>>>> upstream/18.0
                 />
                 <button
                     name="action_done"
                     type="object"
                     icon="fa-check"
+<<<<<<< HEAD
                     title="Done"
                     invisible="state != 'confirm'"
                 />
                 <button
                     name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
+=======
+                    invisible="state != 'confirm'"
+                    title="Done"
+                />
+                <button
+                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+>>>>>>> upstream/18.0
                     type="action"
                     icon="fa-ban text-danger"
                     invisible="state in ['cancel','incident', 'done']"
@@ -49,7 +67,11 @@
                     title="Close Reasons"
                 />
                 <button
+<<<<<<< HEAD
                     name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
+=======
+                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+>>>>>>> upstream/18.0
                     type="action"
                     icon="fa-exclamation-triangle"
                     invisible="state != 'confirm'"
@@ -89,7 +111,11 @@
                         invisible="state != 'confirm'"
                     />
                     <button
+<<<<<<< HEAD
                         name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
+=======
+                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+>>>>>>> upstream/18.0
                         id="action_cancel"
                         string="Cancel"
                         type="action"
@@ -97,7 +123,11 @@
                         context="{'att_close_type':'cancel'}"
                     />
                     <button
+<<<<<<< HEAD
                         name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
+=======
+                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+>>>>>>> upstream/18.0
                         id="action_incident"
                         string="Incident"
                         type="action"
@@ -183,6 +213,7 @@
                         </page>
                     </notebook>
                 </sheet>
+<<<<<<< HEAD
                 <div class="oe_chatter">
                     <field
                         name="message_follower_ids"
@@ -192,6 +223,10 @@
                     <field name="activity_ids" widget="mail_activity" />
                     <field name="message_ids" widget="mail_thread" />
                 </div>
+=======
+                <!-- Chatter -->
+                <chatter />
+>>>>>>> upstream/18.0
             </form>
         </field>
     </record>

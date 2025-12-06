@@ -5,7 +5,11 @@
 
 from datetime import timedelta
 
+<<<<<<< HEAD
 from odoo import _, api, fields, models
+=======
+from odoo import api, fields, models
+>>>>>>> upstream/18.0
 from odoo.exceptions import ValidationError
 
 from odoo.addons.base.models.res_partner import _tz_get
@@ -228,7 +232,11 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     def _constrains_partner_ids(self):
         for item in self:
             if len(item.partner_ids) > 1:
+<<<<<<< HEAD
                 raise ValidationError(_("Only one customer is allowed"))
+=======
+                raise ValidationError(self.env._("Only one customer is allowed"))
+>>>>>>> upstream/18.0
 
     @api.onchange("end_type")
     def _onchange_end_type(self):
