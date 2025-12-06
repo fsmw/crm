@@ -244,6 +244,63 @@ class TestCalendarEvent(common.TransactionCase):
         self.assertIn("user_id", values)
         self.assertEqual(values["user_id"], 1)
 
+    def test_write_updates_visit_date_and_user(self):
+        partner = self.env["res.partner"].create({"name": "Test Partner 2"})
+        visitor_user = self.env.ref("base.user_demo")
+        visit = self.env["crm.salesperson.planner.visit"].create(
+            {
+                "name": "Test Visit",
+                "user_id": visitor_user.id,
+                "partner_id": partner.id,
+            }
+        )
+        event = self.env["calendar.event"].create(
+            {
+                "name": "Test Event for visit",
+                "user_id": visitor_user.id,
+                "res_model": "crm.salesperson.planner.visit",
+                "res_id": visit.id,
+                "partner_ids": [(6, 0, [partner.id, visitor_user.partner_id.id])],
+            }
+        )
+        # Update start date to update visit.date
+        new_start_dt = fields.Datetime.from_string(fields.Datetime.now()) + timedelta(days=10)
+        new_start = fields.Datetime.to_string(new_start_dt)
+        event.write({"start": new_start})
+        visit.refresh()
+        self.assertEqual(visit.date, new_start_dt.date())
+        # Update user to new user and check visit.user_id updated
+        new_user = self.env.ref("base.user_admin")
+        event.write({"user_id": new_user.id})
+        visit.refresh()
+        self.assertEqual(visit.user_id, new_user)
+
+    def test_unlink_calendar_event_with_visit(self):
+        partner = self.env["res.partner"].create({"name": "Partner for unlink"})
+        visitor_user = self.env.ref("base.user_demo")
+        visit = self.env["crm.salesperson.planner.visit"].create(
+            {
+                "name": "Visit Unlink Test",
+                "user_id": visitor_user.id,
+                "partner_id": partner.id,
+            }
+        )
+        event = self.env["calendar.event"].create(
+            {
+                "name": "Test Event Unlink",
+                "user_id": visitor_user.id,
+                "res_model": "crm.salesperson.planner.visit",
+                "res_id": visit.id,
+                "partner_ids": [(6, 0, [partner.id, visitor_user.partner_id.id])],
+            }
+        )
+        with self.assertRaises(ValidationError):
+            event.unlink()
+        # Bypass context
+        event.with_context(bypass_cancel_visit=True).unlink()
+        found_event = self.env["calendar.event"].browse(event.id)
+        self.assertFalse(found_event.exists())
+
 
 class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
     def test_partner_ids_constraint(self):
